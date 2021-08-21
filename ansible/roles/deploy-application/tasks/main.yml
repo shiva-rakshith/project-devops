@@ -1,0 +1,5 @@
+- name: Build docker image using Dockerfile
+  shell: cd .. && docker build -t devops .
+
+- name: Run the docker container
+  shell: docker run -p9000:9000 -d -v C:/Projects/project-devops/resources:/resources devops
